@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORDENMILAN PALACE LLP - Bento Bakery Shop</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>MORDENMILAN <span>PALACE LLP</span></h1>
+            </div>
+
+            <!-- Hamburger menu for mobile -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#bakery" class="nav-link">Bento Bakery</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="cart-icon">
+                    <a href="#" id="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-customer-info">
+                <h4 class="cart-customer-info-title">Your Details (for delivery)</h4>
+                <input type="text" id="order-name" placeholder="Your Name" required>
+                <input type="email" id="order-email" placeholder="Your Email" required>
+                <input type="tel" id="order-phone" placeholder="Your Phone">
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="btn btn-primary" id="place-order-btn">Place Order</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>MORDENMILAN PALACE LLP</h1>
+                    <p class="hero-subtitle">Excellence in Franchise Hospitality</p>
+                    <p class="hero-text">Proud owners of Bento Bakery Shop and more luxury franchises</p>
+                    <a href="#bakery" class="btn btn-gold">Explore Bento Bakery <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Bakery Shop Section -->
+        <section id="bakery" class="bakery-section">
+            <div class="container">
+                <h2 class="section-title">Bento Bakery Shop <span>Our Premium Cake Franchise</span></h2>
+
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">All Cakes</button>
+                    <button class="filter-btn" data-category="Wedding Cakes">Wedding Cakes</button>
+                    <button class="filter-btn" data-category="Birthday Cakes">Birthday Cakes</button>
+                    <button class="filter-btn" data-category="Custom Cakes">Custom Cakes</button>
+                    <button class="filter-btn" data-category="Pastries">Pastries</button>
+                </div>
+
+                <!-- Cake Products Grid -->
+                <div class="cakes-grid" id="cakes-grid">
+                    <!-- Products will be dynamically loaded here -->
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i> Loading delicious cakes...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About MORDENMILAN PALACE LLP</h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p class="established">Established 2015, we bring luxury hospitality through premium
+                                franchises like Bento Bakery Shop.</p>
+                            <p class="vision"><strong>Our Vision:</strong> Elevating everyday moments with extraordinary
+                                experiences.</p>
+                            <p class="description">MORDENMILAN PALACE LLP is a premier franchise hospitality group
+                                dedicated to bringing the finest culinary experiences to discerning customers. Our
+                                flagship franchise, Bento Bakery Shop, represents our commitment to quality, innovation,
+                                and exceptional service.</p>
+                            <div class="stats">
+                                <div class="stat">
+                                    <span class="stat-number">8+</span>
+                                    <span class="stat-label">Franchises</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">Cake Varieties</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">10k+</span>
+                                    <span class="stat-label">Happy Customers</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image">
+                            <img src="/images/bakery-interior.jpg" alt="Bento Bakery Shop Interior"
+                                onerror="this.src='https://via.placeholder.com/500x400?text=Bento+Bakery'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>MORDENMILAN PALACE LLP</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, Business Bay, Dubai, UAE</p>
+                        <p><i class="fas fa-phone"></i> +971 4 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> info@mordenmilan.ae</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 8:00 PM</p>
+
+                        <h4 class="mt-4">Bento Bakery Shop</h4>
+                        <p><i class="fas fa-store"></i> Shop 5, Luxury Mall, Downtown Dubai</p>
+                        <p><i class="fas fa-phone"></i> +971 4 765 4321</p>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone (optional)">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gold">Send Message</button>
+                        </form>
+                        <div id="form-message" class="form-message"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>MORDENMILAN <span>PALACE LLP</span></h3>
+                    <p>Excellence in Franchise Hospitality</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#bakery">Bento Bakery</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MORDENMILAN PALACE LLP. All rights reserved. | Bento Bakery Shop is a registered
+                    franchise.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
